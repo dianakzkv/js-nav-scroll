@@ -1,0 +1,39 @@
+@use '../../style' as s;
+
+main {
+  padding: s.space(15);
+
+  display: grid;
+  grid-template-rows: repeat(7, 500px);
+  gap: s.space(25);
+
+  position: relative;
+}
+
+section {
+  background-color: bisque;
+  border-radius: 35px;
+  padding: s.space(15);
+}
+
+button {
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #ff7538;
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  position: fixed;
+  bottom: 45px;
+  left: 45px;
+
+  display: none;
+}

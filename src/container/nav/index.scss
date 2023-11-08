@@ -1,0 +1,40 @@
+@use '../../style' as s;
+
+main {
+  //   background: s.color(dark);
+  //   color: s.color(white);
+  padding: s.space(5);
+  margin-top: s.space(50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  background: s.color(grey);
+  color: s.color(white);
+  padding: s.space(3) s.space(5);
+  border-radius: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: s.space(5);
+
+  input {
+    min-width: 400px;
+    background-color: s.color(dark);
+    border-radius: 35px;
+    padding: s.space(2) s.space(4);
+  }
+
+  &__button {
+    width: 25px;
+    height: 25px;
+
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

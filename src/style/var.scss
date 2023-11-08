@@ -5,6 +5,16 @@ $colorMap: (
   dark: #15151a,
   gray: #2e2e36,
   main: blue,
+
+  orange-light: #f7e9e1,
+  orange: #f46f17,
+  orange-op: #ff6600,
+  pink: #ef5da8,
+  pink-light: #f6e8ef,
+  text-light: #969494,
+  main-text: #121212,
+  sub-text: #363636,
+  back-card: #f7f7f7,
 );
 
 @function color($key) {

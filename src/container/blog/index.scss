@@ -1,0 +1,94 @@
+@use '../../style' as s;
+
+body {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 450px;
+  height: 750px;
+
+  font-size: 18px;
+  color: s.color(main-text);
+
+  border: 1.5px solid s.color(text-light);
+  border-radius: 25px;
+
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+
+  margin: 30px 0;
+}
+.post {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: s.space(4);
+  }
+
+  &__card {
+    padding: s.space(4);
+    background-color: s.color(back-card);
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+
+    &--viewed {
+      background-color: s.color(white);
+      border: 2px solid s.color(back-card);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__category {
+    padding: s.space(3);
+    border-radius: 25px;
+    font-size: 14px;
+
+    &-list {
+      display: flex;
+      gap: 5px;
+    }
+
+    &--1 {
+      background-color: s.color(orange-light);
+      color: s.color(orange);
+    }
+    &--2 {
+      background-color: s.color(pink-light);
+      color: s.color(pink);
+    }
+  }
+
+  &__date {
+    color: s.color(text-light);
+  }
+
+  &__text {
+    line-height: 145%;
+    font-weight: 600;
+    color: s.color(sub-text);
+
+    &--viewed {
+      color: s.color(text-light);
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use '../../style' as s;
+
+.page {
+  background: s.color(white);
+  padding: s.space(4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: s.color(white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  padding: s.space(5);
+
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: s.space(4);
+  width: 700px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: s.space(2);
+
+  &__input {
+    border: 1px solid s.color(border);
+    border-radius: 10px;
+    padding: s.space(2);
+    width: 100%;
+  }
+
+  &__button {
+    background-color: s.color(main);
+    color: s.color(white);
+    font-weight: 500;
+    border-radius: 10px;
+    padding: s.space(2) s.space(4);
+
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.task {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: s.space(2);
+  border-bottom: 1px solid s.color(border);
+  padding: s.space(2) 0;
+
+  &__list {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: s.space(2);
+  }
+  &__number,
+  &__text {
+    font-size: 16px;
+  }
+
+  &--done &__text {
+    text-decoration: line-through;
+    color: s.color(text-light);
+  }
+  &--done &__number {
+    color: s.color(text-light);
+  }
+
+  &__button {
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+
+    &--do {
+      background-image: url('/svg/do.svg');
+    }
+    &--cancel {
+      background-image: url('/svg/cancel.svg');
+    }
+  }
+
+  &--done &__button--do {
+    background-image: url('/svg/done.svg');
+  }
+}

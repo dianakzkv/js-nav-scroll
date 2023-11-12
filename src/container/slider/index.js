@@ -50,7 +50,7 @@ class Slider {
 
       if (
         this.#count === this.#max ||
-        crollLeft === scrollWidth - offsetWidth
+        scrollLeft === scrollWidth - offsetWidth
       ) {
         this.#count = 1
         scroll = 0
